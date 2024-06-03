@@ -29,13 +29,19 @@ namespace DummyClient
                     // 빠져 나오면 연결한 것임
                     socket.Connect(endPoint);
 
+                 
+
                     // RemoteEndPoint -> 연결된 반대쪽 IP
                     Console.WriteLine($"Connected To {socket.RemoteEndPoint.ToString()}");
 
-                    // 보낸다.
-                    byte[] sendBuff = Encoding.UTF8.GetBytes("Hello World!");
-                    int sendBytes = socket.Send(sendBuff);
+                    // 보낸다
+                    for (int i = 0; i < 5; i++)
+                    {
+                        byte[] sendBuff = Encoding.UTF8.GetBytes($"Hello World! {i}");
+                        int sendBytes = socket.Send(sendBuff);
+                    }
 
+          
                     // 받는다.
                     byte[] recvBuff = new byte[1024];
                     int recvBytes = socket.Receive(recvBuff);

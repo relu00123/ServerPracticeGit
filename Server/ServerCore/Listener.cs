@@ -32,6 +32,8 @@ namespace ServerCore
             // 전화 대기열이 10명이 넘어가면 바로 컷트 (Fail)
             _listenSocket.Listen(10);
 
+           
+
             SocketAsyncEventArgs args = new SocketAsyncEventArgs();
             // EventHandler방식이다. Event방식 즉, Callback으로 전달해준다.
             // Delegate 형식이다. 
@@ -69,6 +71,10 @@ namespace ServerCore
 
         }
 
+        // Callback 함수는 주 Thread (While문을 계속 돌고있음) 와 달리
+        // 우리가 Task나 Thread를 만들지 않았는데도 자기들이 만들어서 그 쓰레드에서
+        // 수행중이다. 즉 Race Condition이 일어날 수 있다. 
+        // 나중에 동기화 문제가 일어날 수 있는 코드를 작성하면 Lock을 걸어야 한다. 
         void OnAcceptCompleted(Object sender, SocketAsyncEventArgs args)
         {
             // 낚시에 걸린 물고기를 통에 집어넣음 

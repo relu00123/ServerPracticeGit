@@ -12,3 +12,4 @@ C:\ServerPractice\Server\ServerCore\obj\Release\net8.0\refint\ServerCore.dll
 C:\ServerPractice\Server\ServerCore\obj\Release\net8.0\ServerCore.pdb
 C:\ServerPractice\Server\ServerCore\obj\Release\net8.0\ServerCore.genruntimeconfig.cache
 C:\ServerPractice\Server\ServerCore\obj\Release\net8.0\ref\ServerCore.dll
+C:\ServerPractice\Server\ServerCore\obj\Release\net8.0\ServerCore.sourcelink.json
