@@ -11,16 +11,16 @@ namespace ServerCore
     class Listener
     {
         Socket _listenSocket;
-        Action<Socket> _onAcceptHandler;
+        Func<Session> _sessionFactory;
 
-        public void init(IPEndPoint endPoint, Action<Socket> onAcceptHandler)
+        public void init(IPEndPoint endPoint, Func<Session> sessionFactory)
         {
             // 문지기
             // 첫번째 인자 : 네트워크 주소, AddressFamily에는 Ipv4인지 Ipv6인지
             // 사용하던 그대로 들어가 있다. 
             // 두번째 인자, 세번째 인자 : tcp or udp
             _listenSocket = new Socket(endPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
-            _onAcceptHandler += onAcceptHandler;
+            _sessionFactory += sessionFactory;
 
             // 문지기 교육  
             // endpoint에는 식당주소 (ip) 와 정문인지 후문인지(포트번호)
@@ -83,8 +83,9 @@ namespace ServerCore
             {
                 // 유저가 왔으면 무엇을 해야하는가? 
                 // args.AccpetSocket이 유저. _onAcceptHandler에게 유저를 전달. 
-                _onAcceptHandler.Invoke(args.AcceptSocket);
-
+                Session session = _sessionFactory.Invoke();
+                session.Start(args.AcceptSocket);
+                session.OnConnected(args.AcceptSocket.RemoteEndPoint);
             }
             else
                 Console.WriteLine(args.SocketError.ToString());

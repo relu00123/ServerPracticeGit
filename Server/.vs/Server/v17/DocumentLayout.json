@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\ServerPractice\\Server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3D73C01-F160-44F1-BACE-8EF71FE9A65E}|ServerCore\\ServerCore.csproj|c:\\serverpractice\\server\\servercore\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3D73C01-F160-44F1-BACE-8EF71FE9A65E}|ServerCore\\ServerCore.csproj|solutionrelative:servercore\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F3D73C01-F160-44F1-BACE-8EF71FE9A65E}|ServerCore\\ServerCore.csproj|c:\\serverpractice\\server\\servercore\\listener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3D73C01-F160-44F1-BACE-8EF71FE9A65E}|ServerCore\\ServerCore.csproj|solutionrelative:servercore\\listener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F3D73C01-F160-44F1-BACE-8EF71FE9A65E}|ServerCore\\ServerCore.csproj|c:\\serverpractice\\server\\servercore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3D73C01-F160-44F1-BACE-8EF71FE9A65E}|ServerCore\\ServerCore.csproj|solutionrelative:servercore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3D73C01-F160-44F1-BACE-8EF71FE9A65E}|ServerCore\\ServerCore.csproj|c:\\serverpractice\\server\\servercore\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3D73C01-F160-44F1-BACE-8EF71FE9A65E}|ServerCore\\ServerCore.csproj|solutionrelative:servercore\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\201710881\\AppData\\Local\\Temp\\.vsdbgsrc\\0893ff76b23de4ab9113819dde74eb0169ca782c7d90dea113f7d89bbb96676a\\Listener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\201710881\\AppData\\Local\\SourceServer\\ad540cf0149ef21f214bba0955f52b019f1247b30e97191c3e310640d898601b\\src\\libraries\\System.Private.CoreLib\\src\\System\\Threading\\ExecutionContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\201710881\\AppData\\Local\\SourceServer\\a53ef1c667e0fc8dd37b0eda7d0f1beadce2e139c696e36684111e744b4a0a26\\src\\libraries\\System.Private.CoreLib\\src\\System\\Runtime\\ExceptionServices\\ExceptionDispatchInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\201710881\\AppData\\Local\\Temp\\.vsdbgsrc\\8345ef61f71eff0b5e6915096f4aeb2942644975161f5eda0710e4f30a6e0315\\Interop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5C1D4790-3298-4BC4-82B8-BFDDA28AC195}|DummyClient\\DummyClient.csproj|c:\\serverpractice\\server\\dummyclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,8 +49,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 202,
-          "SelectedChildIndex": 3,
+          "DockedWidth": 225,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,46 +62,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\ServerPractice\\Server\\ServerCore\\Program.cs",
-              "RelativeDocumentMoniker": "ServerCore\\Program.cs",
-              "ToolTip": "C:\\ServerPractice\\Server\\ServerCore\\Program.cs",
-              "RelativeToolTip": "ServerCore\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAAAAAA",
+              "DocumentIndex": 6,
+              "Title": "Interop.cs",
+              "DocumentMoniker": "C:\\Users\\201710881\\AppData\\Local\\Temp\\.vsdbgsrc\\8345ef61f71eff0b5e6915096f4aeb2942644975161f5eda0710e4f30a6e0315\\Interop.cs",
+              "RelativeDocumentMoniker": "..\\..\\Users\\201710881\\AppData\\Local\\Temp\\.vsdbgsrc\\8345ef61f71eff0b5e6915096f4aeb2942644975161f5eda0710e4f30a6e0315\\Interop.cs",
+              "ToolTip": "C:\\Users\\201710881\\AppData\\Local\\Temp\\.vsdbgsrc\\8345ef61f71eff0b5e6915096f4aeb2942644975161f5eda0710e4f30a6e0315\\Interop.cs [\uC77D\uAE30 \uC804\uC6A9]",
+              "RelativeToolTip": "..\\..\\Users\\201710881\\AppData\\Local\\Temp\\.vsdbgsrc\\8345ef61f71eff0b5e6915096f4aeb2942644975161f5eda0710e4f30a6e0315\\Interop.cs [\uC77D\uAE30 \uC804\uC6A9]",
+              "ViewState": "AQIAAC0CAAAAAAAAAAAQwDwCAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T07:48:09.039Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-04T11:58:03.314Z",
+              "EditorCaption": " [\uC77D\uAE30 \uC804\uC6A9]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Session.cs",
               "DocumentMoniker": "C:\\ServerPractice\\Server\\ServerCore\\Session.cs",
               "RelativeDocumentMoniker": "ServerCore\\Session.cs",
               "ToolTip": "C:\\ServerPractice\\Server\\ServerCore\\Session.cs",
               "RelativeToolTip": "ServerCore\\Session.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAADwv1gAAAAAAAAA",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAvwGIAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-03T10:53:48.846Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Listener.cs",
               "DocumentMoniker": "C:\\ServerPractice\\Server\\ServerCore\\Listener.cs",
               "RelativeDocumentMoniker": "ServerCore\\Listener.cs",
               "ToolTip": "C:\\ServerPractice\\Server\\ServerCore\\Listener.cs",
               "RelativeToolTip": "ServerCore\\Listener.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAQwD4AAAA7AAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAQwBgAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-03T09:44:54.66Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\ServerPractice\\Server\\DummyClient\\Program.cs",
               "RelativeDocumentMoniker": "DummyClient\\Program.cs",
@@ -97,12 +109,11 @@
               "RelativeToolTip": "DummyClient\\Program.cs",
               "ViewState": "AQIAACsAAAAAAAAAAAAQwBcAAABoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T09:46:34.223Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T09:46:34.223Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Server.csproj",
               "DocumentMoniker": "C:\\ServerPractice\\Server\\Server\\Server.csproj",
               "RelativeDocumentMoniker": "Server\\Server.csproj",
@@ -114,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Lock.cs",
               "DocumentMoniker": "C:\\ServerPractice\\Server\\ServerCore\\Lock.cs",
               "RelativeDocumentMoniker": "ServerCore\\Lock.cs",
@@ -126,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "ServerCore.csproj",
               "DocumentMoniker": "C:\\ServerPractice\\Server\\ServerCore\\ServerCore.csproj",
               "RelativeDocumentMoniker": "ServerCore\\ServerCore.csproj",
@@ -135,6 +146,64 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-05-29T10:08:39.045Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 177,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ExecutionContext.cs",
+              "DocumentMoniker": "C:\\Users\\201710881\\AppData\\Local\\SourceServer\\ad540cf0149ef21f214bba0955f52b019f1247b30e97191c3e310640d898601b\\src\\libraries\\System.Private.CoreLib\\src\\System\\Threading\\ExecutionContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\Users\\201710881\\AppData\\Local\\SourceServer\\ad540cf0149ef21f214bba0955f52b019f1247b30e97191c3e310640d898601b\\src\\libraries\\System.Private.CoreLib\\src\\System\\Threading\\ExecutionContext.cs",
+              "ToolTip": "C:\\Users\\201710881\\AppData\\Local\\SourceServer\\ad540cf0149ef21f214bba0955f52b019f1247b30e97191c3e310640d898601b\\src\\libraries\\System.Private.CoreLib\\src\\System\\Threading\\ExecutionContext.cs [\uC77D\uAE30 \uC804\uC6A9]",
+              "RelativeToolTip": "..\\..\\Users\\201710881\\AppData\\Local\\SourceServer\\ad540cf0149ef21f214bba0955f52b019f1247b30e97191c3e310640d898601b\\src\\libraries\\System.Private.CoreLib\\src\\System\\Threading\\ExecutionContext.cs [\uC77D\uAE30 \uC804\uC6A9]",
+              "ViewState": "AQIAAL4AAAAAAAAAAAAQwMoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T12:00:48.346Z",
+              "EditorCaption": " [\uC77D\uAE30 \uC804\uC6A9]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Listener.cs",
+              "DocumentMoniker": "C:\\Users\\201710881\\AppData\\Local\\Temp\\.vsdbgsrc\\0893ff76b23de4ab9113819dde74eb0169ca782c7d90dea113f7d89bbb96676a\\Listener.cs",
+              "RelativeDocumentMoniker": "..\\..\\Users\\201710881\\AppData\\Local\\Temp\\.vsdbgsrc\\0893ff76b23de4ab9113819dde74eb0169ca782c7d90dea113f7d89bbb96676a\\Listener.cs",
+              "ToolTip": "C:\\Users\\201710881\\AppData\\Local\\Temp\\.vsdbgsrc\\0893ff76b23de4ab9113819dde74eb0169ca782c7d90dea113f7d89bbb96676a\\Listener.cs [\uC77D\uAE30 \uC804\uC6A9]",
+              "RelativeToolTip": "..\\..\\Users\\201710881\\AppData\\Local\\Temp\\.vsdbgsrc\\0893ff76b23de4ab9113819dde74eb0169ca782c7d90dea113f7d89bbb96676a\\Listener.cs [\uC77D\uAE30 \uC804\uC6A9]",
+              "ViewState": "AQIAABsAAAAAAAAAAAAQwC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T12:00:37.921Z",
+              "EditorCaption": " [\uC77D\uAE30 \uC804\uC6A9]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ServerPractice\\Server\\ServerCore\\Program.cs",
+              "RelativeDocumentMoniker": "ServerCore\\Program.cs",
+              "ToolTip": "C:\\ServerPractice\\Server\\ServerCore\\Program.cs",
+              "RelativeToolTip": "ServerCore\\Program.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAwDcAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T07:48:09.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ExceptionDispatchInfo.cs",
+              "DocumentMoniker": "C:\\Users\\201710881\\AppData\\Local\\SourceServer\\a53ef1c667e0fc8dd37b0eda7d0f1beadce2e139c696e36684111e744b4a0a26\\src\\libraries\\System.Private.CoreLib\\src\\System\\Runtime\\ExceptionServices\\ExceptionDispatchInfo.cs",
+              "RelativeDocumentMoniker": "..\\..\\Users\\201710881\\AppData\\Local\\SourceServer\\a53ef1c667e0fc8dd37b0eda7d0f1beadce2e139c696e36684111e744b4a0a26\\src\\libraries\\System.Private.CoreLib\\src\\System\\Runtime\\ExceptionServices\\ExceptionDispatchInfo.cs",
+              "ToolTip": "C:\\Users\\201710881\\AppData\\Local\\SourceServer\\a53ef1c667e0fc8dd37b0eda7d0f1beadce2e139c696e36684111e744b4a0a26\\src\\libraries\\System.Private.CoreLib\\src\\System\\Runtime\\ExceptionServices\\ExceptionDispatchInfo.cs [\uC77D\uAE30 \uC804\uC6A9]",
+              "RelativeToolTip": "..\\..\\Users\\201710881\\AppData\\Local\\SourceServer\\a53ef1c667e0fc8dd37b0eda7d0f1beadce2e139c696e36684111e744b4a0a26\\src\\libraries\\System.Private.CoreLib\\src\\System\\Runtime\\ExceptionServices\\ExceptionDispatchInfo.cs [\uC77D\uAE30 \uC804\uC6A9]",
+              "ViewState": "AQIAACgAAAAAAAAAAAAQwDQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T12:00:49.077Z",
+              "EditorCaption": " [\uC77D\uAE30 \uC804\uC6A9]"
             }
           ]
         }
