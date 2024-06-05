@@ -32,3 +32,7 @@ C:\Users\Desktop\Desktop\ServerPractice\Server\DummyClient\obj\Release\net8.0\re
 C:\Users\Desktop\Desktop\ServerPractice\Server\DummyClient\obj\Release\net8.0\DummyClient.pdb
 C:\Users\Desktop\Desktop\ServerPractice\Server\DummyClient\obj\Release\net8.0\DummyClient.genruntimeconfig.cache
 C:\Users\Desktop\Desktop\ServerPractice\Server\DummyClient\obj\Release\net8.0\ref\DummyClient.dll
+C:\ServerPractice\Server\DummyClient\bin\Release\net8.0\ServerCore.dll
+C:\ServerPractice\Server\DummyClient\bin\Release\net8.0\ServerCore.pdb
+C:\ServerPractice\Server\DummyClient\obj\Release\net8.0\DummyClient.csproj.AssemblyReference.cache
+C:\ServerPractice\Server\DummyClient\obj\Release\net8.0\DummyCli.C46919B7.Up2Date

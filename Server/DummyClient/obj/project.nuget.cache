@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cj4bv9ha1SA=",
+  "dgSpecHash": "sG62pzLl/g53D3drZ1XjMEX5cyRzvDpFtksZDyLoTCRGbXcOQMZ6ZzKYZ6haaGb3Zdnuh+/GRVwfy9LExm8PZg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Desktop\\Desktop\\ServerPractice\\Server\\DummyClient\\DummyClient.csproj",
+  "projectFilePath": "C:\\ServerPractice\\Server\\DummyClient\\DummyClient.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
