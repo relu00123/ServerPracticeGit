@@ -29,6 +29,9 @@ namespace ServerCore
         }
     }
 
+    // 다루는 강좌에서 SendBuffer는 재사용을 하지 않는다. 만약 FreeSize를 초과하는 만큼을
+    // 요구하면 새로 하나 만들어서 준다.
+    // 이것에 대해 최적화를 하려면 Pool을 만들어서 할수는 있을 것이지만 강좌에서는 다루지 않음을 명시하였음.
     public class SendBuffer
     {
       
@@ -50,8 +53,8 @@ namespace ServerCore
             if (reserveSize > FreeSize)
                 return null;
 
-            // 예약한 영역을 반환 - 이만큼을 다 사용한다고 보장할 수는 없음
-            // 예약만 하는 거지
+            // 예약한 영역을 반환 - 예약한 영역만큼을 다 사용한다고 보장할 수는 없음
+            // 그냥 큰 파이를 미리 할당받고 야금야금 쓰는 것임
             return new ArraySegment<byte>(_buffer, _usedSize, reserveSize);
         }
 
