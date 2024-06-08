@@ -113,7 +113,7 @@ count += sizeof({2});";
         // {0} 변수 이름
         // {1} 변수 형식
         public static string readByteFormat =
-@"this.{0} = ({1})sgement.Array[sgement.Offset + count];
+@"this.{0} = ({1})segment.Array[segment.Offset + count];
 count += sizeof({1});";
 
         // {0} 변수 이름
@@ -146,7 +146,7 @@ count += sizeof({1});";
         // {0} 변수 이름
         // {1} 변수 형식
         public static string writeByteFormat =
-@"sgement.Array[sgement.Offset + count] = (byte)this.{0};
+@"segment.Array[segment.Offset + count] = (byte)this.{0};
 count += sizeof({1});";
 
         // {0} 변수 이름
