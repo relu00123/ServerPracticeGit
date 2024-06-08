@@ -8,6 +8,30 @@ namespace PacketGenerator
 {
     class PacketFormat
     {
+        // {0} 패킷 이름/번호 목록
+        // {1} 패킷 목록
+        public static string fileFormat =
+@"using ServerCore;
+using System;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using ServerCore;
+using System.Runtime.InteropServices;
+
+public enum PacketID
+{{
+    {0}
+}}
+
+{1}
+";
+        
+        // {0} 패킷 이름
+        // {1} 패킷 번호
+        public static string packetEnumFormat =
+@"{0} = {1},";
+
         // {0} 패킷 이름
         // {1} 멤버 변수들
         // {2} 멤버 변수 Read
@@ -59,7 +83,7 @@ class {0}    // Require의 약자 - 플레이어의 정보
         // {4} 멤버 변수 Write
         public static string memberListFormat =
 @"
-public struct {0}
+public class {0}
 {{
     {2}
 
@@ -87,10 +111,16 @@ public List<{0}> {1}s = new List<{0}>();";
 count += sizeof({2});";
 
         // {0} 변수 이름
+        // {1} 변수 형식
+        public static string readByteFormat =
+@"this.{0} = ({1})sgement.Array[sgement.Offset + count];
+count += sizeof({1});";
+
+        // {0} 변수 이름
         public static string readStringFormat =
 @" ushort {0}Len = BitConverter.ToUInt16(s.Slice(count, s.Length - count));
 count += sizeof(ushort);
-this.{0} = Encoding.Unicode.GetString(s.Slice(count, nameLen));
+this.{0} = Encoding.Unicode.GetString(s.Slice(count, {0}Len));
 count += {0}Len;";
 
         // {0} 리스트 이름 [대문자]
@@ -110,6 +140,13 @@ for (int i = 0; i < {1}Len; i++)
         // {1} 변수 형식
         public static string writeFormat =
 @"success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.{0});
+count += sizeof({1});";
+
+
+        // {0} 변수 이름
+        // {1} 변수 형식
+        public static string writeByteFormat =
+@"sgement.Array[sgement.Offset + count] = (byte)this.{0};
 count += sizeof({1});";
 
         // {0} 변수 이름
