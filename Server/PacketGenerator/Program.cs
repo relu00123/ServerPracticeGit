@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Xml;
 
 namespace PacketGenerator
@@ -9,10 +10,12 @@ namespace PacketGenerator
         static ushort packetId;
         static string packetEnums;
 
+        static string clientRegister;
+        static string serverRegister;
+
         static void Main(string[] args)
         {
-
-            string pdlPath = "../../PDL.xml";
+            string pdlPath = "../PDL.xml";
 
             XmlReaderSettings settings = new XmlReaderSettings()
             {
@@ -25,31 +28,30 @@ namespace PacketGenerator
 
             using (XmlReader r = XmlReader.Create(pdlPath, settings))
             {
-                // XML파일의 헤더를 건너 뛴다.
                 r.MoveToContent();
 
-                while(r.Read())
+                while (r.Read())
                 {
-                    // Depth는 몇개로 파고드는지 && 닫는것이 아닌지
-                    // 시작하는 것은 Elemnt이고 끝나는 것은 EndElement이다. 
                     if (r.Depth == 1 && r.NodeType == XmlNodeType.Element)
                         ParsePacket(r);
                     //Console.WriteLine(r.Name + " " + r["name"]);
                 }
 
                 string fileText = string.Format(PacketFormat.fileFormat, packetEnums, genPackets);
-                // 추출한 내용을 GenPackets.cs로 옮겨라
                 File.WriteAllText("GenPackets.cs", fileText);
+                string clientManagerText = string.Format(PacketFormat.managerFormat, clientRegister);
+                File.WriteAllText("ClientPacketManager.cs", clientManagerText);
+                string serverManagerText = string.Format(PacketFormat.managerFormat, serverRegister);
+                File.WriteAllText("ServerPacketManager.cs", serverManagerText);
             }
-
         }
 
         public static void ParsePacket(XmlReader r)
         {
-            if (r.NodeType == XmlNodeType.EndElement) // 혹시 모르니까. 들어올일 없을것임
+            if (r.NodeType == XmlNodeType.EndElement)
                 return;
 
-            if (r.Name.ToLower() != "packet") // 혹시 모르니까
+            if (r.Name.ToLower() != "packet")
             {
                 Console.WriteLine("Invalid packet node");
                 return;
@@ -59,19 +61,22 @@ namespace PacketGenerator
             if (string.IsNullOrEmpty(packetName))
             {
                 Console.WriteLine("Packet without name");
+                return;
             }
 
             Tuple<string, string, string> t = ParseMembers(r);
-            genPackets += string.Format(PacketFormat.packetFormat,
-                packetName, t.Item1, t.Item2, t.Item3);
+            genPackets += string.Format(PacketFormat.packetFormat, packetName, t.Item1, t.Item2, t.Item3);
             packetEnums += string.Format(PacketFormat.packetEnumFormat, packetName, ++packetId) + Environment.NewLine + "\t";
+
+            if (packetName.StartsWith("S_") || packetName.StartsWith("s_"))
+                clientRegister += string.Format(PacketFormat.managerRegisterFormat, packetName) + Environment.NewLine;
+            else
+                serverRegister += string.Format(PacketFormat.managerRegisterFormat, packetName) + Environment.NewLine;
         }
 
-        // {0} 패킷 이름
         // {1} 멤버 변수들
         // {2} 멤버 변수 Read
         // {3} 멤버 변수 Write
-
         public static Tuple<string, string, string> ParseMembers(XmlReader r)
         {
             string packetName = r["name"];
@@ -81,7 +86,7 @@ namespace PacketGenerator
             string writeCode = "";
 
             int depth = r.Depth + 1;
-            while(r.Read())
+            while (r.Read())
             {
                 if (r.Depth != depth)
                     break;
@@ -89,7 +94,7 @@ namespace PacketGenerator
                 string memberName = r["name"];
                 if (string.IsNullOrEmpty(memberName))
                 {
-                    Console.Write("Member without name");
+                    Console.WriteLine("Member without name");
                     return null;
                 }
 
@@ -101,8 +106,7 @@ namespace PacketGenerator
                     writeCode += Environment.NewLine;
 
                 string memberType = r.Name.ToLower();
-
-                switch(memberType)
+                switch (memberType)
                 {
                     case "byte":
                     case "sbyte":
@@ -165,13 +169,12 @@ namespace PacketGenerator
                 FirstCharToUpper(listName),
                 FirstCharToLower(listName));
 
-            string writeCode = string.Format(PacketFormat.readListFormat,
+            string writeCode = string.Format(PacketFormat.writeListFormat,
                 FirstCharToUpper(listName),
                 FirstCharToLower(listName));
 
             return new Tuple<string, string, string>(memberCode, readCode, writeCode);
         }
-
 
         public static string ToMemberType(string memberType)
         {
@@ -202,7 +205,6 @@ namespace PacketGenerator
                 return "";
             return input[0].ToString().ToUpper() + input.Substring(1);
         }
-
 
         public static string FirstCharToLower(string input)
         {

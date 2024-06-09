@@ -13,8 +13,15 @@ public enum PacketID
 	
 }
 
+interface IPacket
+{
+	ushort Protocol { get; }
+	void Read(ArraySegment<byte> segment);
+	ArraySegment<byte> Write();
+}
 
-class PlayerInfoReq    // Require의 약자 - 플레이어의 정보
+
+class PlayerInfoReq : IPacket   // Require의 약자 - 플레이어의 정보
 {
     public byte testByte;
 	public long playerId;
@@ -90,6 +97,8 @@ class PlayerInfoReq    // Require의 약자 - 플레이어의 정보
 	}
 	public List<Skill> skills = new List<Skill>();
 
+    public ushort Protocol {  get { return (ushort)PacketID.PlayerInfoReq; } }
+
     public void Read(ArraySegment<byte> segment)
     {
         ushort count = 0;
@@ -97,7 +106,7 @@ class PlayerInfoReq    // Require의 약자 - 플레이어의 정보
         ReadOnlySpan<byte> s = new ReadOnlySpan<byte>(segment.Array, segment.Offset, segment.Count);
         count += sizeof(ushort);
         count += sizeof(ushort);
-        this.testByte = (byte)sgement.Array[sgement.Offset + count];
+        this.testByte = (byte)segment.Array[segment.Offset + count];
 		count += sizeof(byte);
 		this.playerId = BitConverter.ToInt64(s.Slice(count, s.Length - count));
 		count += sizeof(long);
@@ -127,7 +136,7 @@ class PlayerInfoReq    // Require의 약자 - 플레이어의 정보
         count += sizeof(ushort);
         success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), (ushort)PacketID.PlayerInfoReq);
         count += sizeof(ushort);
-        sgement.Array[sgement.Offset + count] = (byte)this.testByte;
+        segment.Array[segment.Offset + count] = (byte)this.testByte;
 		count += sizeof(byte);
 		success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.playerId);
 		count += sizeof(long);
@@ -151,9 +160,11 @@ class PlayerInfoReq    // Require의 약자 - 플레이어의 정보
     }
 }
 
-class Test    // Require의 약자 - 플레이어의 정보
+class Test : IPacket   // Require의 약자 - 플레이어의 정보
 {
     public int testInt;
+
+    public ushort Protocol {  get { return (ushort)PacketID.Test; } }
 
     public void Read(ArraySegment<byte> segment)
     {
