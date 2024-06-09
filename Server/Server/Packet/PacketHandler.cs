@@ -22,8 +22,9 @@ class PacketHandler
 
         GameRoom room = clientSession.Room;
         room.Push(
-            () => clientSession.Room.Broadcast(clientSession, chatPacket.chat)
+            () => room.Broadcast(clientSession, chatPacket.chat)
         );
     }
 }
 
+    

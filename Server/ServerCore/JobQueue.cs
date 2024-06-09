@@ -18,16 +18,17 @@ namespace ServerCore
         bool _flush = false;
 
         public void Push(Action job)
-        { 
-            lock(_lock)
+        {
+            bool flush = false;
+
+            lock (_lock)
             {
-                bool flush = false;
                 _jobQueue.Enqueue(job);
                 if (_flush == false)
                     flush = _flush = true;
             }
 
-            if (_flush)
+            if (flush)
                 Flush();
         }
 
