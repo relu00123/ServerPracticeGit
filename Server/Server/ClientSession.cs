@@ -40,33 +40,7 @@ namespace Server
         {
             // 여기까지 왔으면 하나의 패킷이 도착한 것이다.
             // 즉 처음 2바이트는 Size, 다음 2Bytes느 Packet ID, ... 해서 하나의 패킷까지
-
-            ushort count = 0;
-
-            ushort size = BitConverter.ToUInt16(buffer.Array, buffer.Offset);
-            count += 2;
-            ushort id = BitConverter.ToUInt16(buffer.Array, buffer.Offset + count);
-            count += 2;
-
-            switch ((PacketID)id)
-            {
-                case PacketID.PlayerInfoReq:
-                    {
-                        PlayerInfoReq p = new PlayerInfoReq();
-                        p.Read(buffer);
-                        
-                        Console.WriteLine($"Player InfoReq: {p.playerId} {p.name}");
-
-                        foreach (PlayerInfoReq.Skill skill in p.skills)
-                        {
-                            Console.Write($"Skill({skill.id})({skill.level})({skill.duration})");
-                        }
-                    }
-                    break;
-            }
-
-            Console.WriteLine($"RecvPacketId: {id}, Size {size}");
-
+            PacketManager.Instance.OnRecvPacket(this, buffer);
         }
 
         public override void OnDisconnected(EndPoint endPoint)

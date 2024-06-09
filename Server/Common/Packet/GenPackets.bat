@@ -1,3 +1,3 @@
 START ../../PacketGenerator/bin/Debug/PacketGenerator.exe ../../PacketGenerator/PDL.xml
-XCOPY /Y GenPackets.cs "../../DummyClient/Packet"
-XCOPY /Y GenPackets.cs "../../Server/Packet"
+COPY /Y GenPackets.cs "../../DummyClient/Packet/GenPackets.cs"
+COPY /Y GenPackets.cs "../../Server/Packet/GenPackets.cs"

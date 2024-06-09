@@ -13,8 +13,15 @@ public enum PacketID
 	
 }
 
+interface IPacket
+{
+	ushort Protocol { get; }
+	void Read(ArraySegment<byte> segment);
+	ArraySegment<byte> Write();
+}
 
-class PlayerInfoReq    // Require의 약자 - 플레이어의 정보
+
+class PlayerInfoReq : IPacket   // Require의 약자 - 플레이어의 정보
 {
     public byte testByte;
 	public long playerId;
@@ -90,6 +97,8 @@ class PlayerInfoReq    // Require의 약자 - 플레이어의 정보
 	}
 	public List<Skill> skills = new List<Skill>();
 
+    public ushort Protocol {  get { return (ushort)PacketID.PlayerInfoReq; } }
+
     public void Read(ArraySegment<byte> segment)
     {
         ushort count = 0;
@@ -151,9 +160,11 @@ class PlayerInfoReq    // Require의 약자 - 플레이어의 정보
     }
 }
 
-class Test    // Require의 약자 - 플레이어의 정보
+class Test : IPacket   // Require의 약자 - 플레이어의 정보
 {
     public int testInt;
+
+    public ushort Protocol {  get { return (ushort)PacketID.Test; } }
 
     public void Read(ArraySegment<byte> segment)
     {
